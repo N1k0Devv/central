@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ---------- Content Refresh ----------
     const mapUrl = 'https://maps.app.goo.gl/8KS8979kN33KCUDH6';
+    const bookingUrl = 'https://www.booking.com/hotel/ge/central-kutaisi2.en-gb.html';
     const hotelsUrl = 'https://www.hotels.com/ho3363967936/central-hotel-kutaisi-kutaisi-georgia/';
     const iconStar = '\u2605';
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -21,10 +22,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const scrollProgress = document.getElementById('scrollProgress');
     const backToTop = document.getElementById('backToTop');
 
+    function setExternalLink(el, url) {
+        if (!el || !url) {
+            return;
+        }
+
+        el.setAttribute('href', url);
+        el.setAttribute('target', '_blank');
+        el.setAttribute('rel', 'noreferrer');
+    }
+
     const navBookBtn = document.querySelector('.nav-book-btn');
     if (navBookBtn) {
-        navBookBtn.textContent = 'View Details';
-        navBookBtn.setAttribute('href', '#contact');
+        navBookBtn.textContent = 'Book Online';
+        setExternalLink(navBookBtn, bookingUrl);
     }
 
     document.title = 'Central Hotel Kutaisi | City Centre Stay in Kutaisi';
@@ -46,14 +57,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const heroButtons = document.querySelectorAll('.hero-buttons .btn');
     if (heroButtons[0]) {
-        heroButtons[0].textContent = 'See Rooms';
-        heroButtons[0].setAttribute('href', '#rooms');
+        heroButtons[0].textContent = 'Book on Booking.com';
+        setExternalLink(heroButtons[0], bookingUrl);
     }
     if (heroButtons[1]) {
         heroButtons[1].textContent = 'View on Maps';
-        heroButtons[1].setAttribute('href', mapUrl);
-        heroButtons[1].setAttribute('target', '_blank');
-        heroButtons[1].setAttribute('rel', 'noreferrer');
+        setExternalLink(heroButtons[1], mapUrl);
     }
 
     const aboutImage = document.querySelector('.about-image img');
@@ -406,7 +415,7 @@ document.addEventListener('DOMContentLoaded', function () {
         contactMapWrapper.innerHTML = [
             '<div class="contact-map-card">',
             '    <h3 class="form-title">Find Central Hotel</h3>',
-            '    <p class="contact-map-lead">Use the live map to preview the exact spot on Tbilisi Street, then open Google Maps for directions or the current hotel listing for fresh details.</p>',
+            '    <p class="contact-map-lead">Use the live map to preview the exact spot on Tbilisi Street, then jump to the Booking.com listing for live pricing and current availability.</p>',
             '    <div class="contact-map-frame">',
             '        <iframe',
             '            src="https://www.google.com/maps?q=Central%20Hotel%2C%2012%20Tbilisi%20St%2C%20Kutaisi%2C%20Georgia&output=embed"',
@@ -416,12 +425,16 @@ document.addEventListener('DOMContentLoaded', function () {
             '        </iframe>',
             '    </div>',
             '    <div class="contact-map-actions">',
-            '        <a href="' + mapUrl + '" class="btn btn-primary btn-sm" target="_blank" rel="noreferrer">Open Google Maps</a>',
-            '        <a href="' + hotelsUrl + '" class="btn btn-outline btn-sm" target="_blank" rel="noreferrer">Open Listing</a>',
+            '        <a href="' + bookingUrl + '" class="btn btn-primary btn-sm" target="_blank" rel="noreferrer">Book on Booking.com</a>',
+            '        <a href="' + mapUrl + '" class="btn btn-outline btn-sm" target="_blank" rel="noreferrer">Open Google Maps</a>',
             '    </div>',
             '</div>'
         ].join('');
     }
+
+    document.querySelectorAll('[data-booking-link]').forEach(function (link) {
+        setExternalLink(link, bookingUrl);
+    });
 
     const footerDesc = document.querySelector('.footer-desc');
     if (footerDesc) {
@@ -430,16 +443,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const socialLinks = document.querySelectorAll('.footer-social .social-link');
     if (socialLinks[0]) {
-        socialLinks[0].setAttribute('href', mapUrl);
-        socialLinks[0].setAttribute('target', '_blank');
-        socialLinks[0].setAttribute('rel', 'noreferrer');
+        setExternalLink(socialLinks[0], mapUrl);
         socialLinks[0].setAttribute('aria-label', 'Google Maps');
     }
     if (socialLinks[1]) {
-        socialLinks[1].setAttribute('href', hotelsUrl);
-        socialLinks[1].setAttribute('target', '_blank');
-        socialLinks[1].setAttribute('rel', 'noreferrer');
-        socialLinks[1].setAttribute('aria-label', 'Hotels.com');
+        setExternalLink(socialLinks[1], bookingUrl);
+        socialLinks[1].setAttribute('aria-label', 'Booking.com');
+    }
+    if (socialLinks[2]) {
+        setExternalLink(socialLinks[2], hotelsUrl);
+        socialLinks[2].setAttribute('aria-label', 'Hotels.com');
     }
 
     const quickLinksList = document.querySelector('.footer-grid .footer-col:nth-child(2) .footer-links');
@@ -452,15 +465,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const newsletterText = document.querySelector('.footer-newsletter-text');
     if (newsletterText) {
-        newsletterText.textContent = 'Subscribe for updates, then verify current availability on the live listing pages.';
+        newsletterText.textContent = 'Subscribe for updates, then use the Booking.com link above for live availability and current rates.';
     }
 
     const awardBadges = document.querySelectorAll('.award-badge');
     if (awardBadges[0]) {
-        awardBadges[0].textContent = 'Breakfast Included';
+        awardBadges[0].textContent = 'Booking.com Ready';
     }
     if (awardBadges[1]) {
-        awardBadges[1].textContent = 'Parking Included';
+        awardBadges[1].textContent = 'Breakfast Included';
     }
 
     // ---------- Navbar Scroll Effect ----------

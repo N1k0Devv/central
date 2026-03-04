@@ -659,7 +659,11 @@
               </div>
             </div>
             <div class="contact-info-card">
-              <div class="contact-icon">
+              <a
+                href="tel:+995571381515"
+                class="contact-icon"
+                aria-label="Call +995 571 38 15 15"
+              >
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -670,10 +674,10 @@
                     d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
                   />
                 </svg>
-              </div>
+              </a>
               <div>
                 <h4>Phone</h4>
-                <p>+995 431 24 00 00<br />+995 555 12 34 56</p>
+                <p><a href="tel:+995571381515">+995 571 38 15 15</a></p>
               </div>
             </div>
             <div class="contact-info-card">
@@ -788,6 +792,48 @@
       </div>
     </section>
 
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section section">
+      <div class="container">
+        <div class="booking-card reveal-up">
+          <div class="booking-copy">
+            <span class="booking-kicker">Booking.com Listing</span>
+            <h2 class="booking-title">
+              Reserve Central Hotel Through Booking.com
+            </h2>
+            <p class="booking-description">
+              Use the live Booking.com listing for current availability,
+              pricing, and a fast reservation flow in a dedicated booking tab.
+            </p>
+            <div class="booking-pill-row">
+              <span class="booking-pill">Live Availability</span>
+              <span class="booking-pill">Current Rates</span>
+              <span class="booking-pill">Instant Reservation</span>
+            </div>
+            <div class="booking-actions">
+              <a href="#" class="btn btn-primary" data-booking-link
+                >Book on Booking.com</a
+              >
+              <a href="#contact" class="btn booking-secondary-btn"
+                >View Location</a
+              >
+            </div>
+          </div>
+          <div class="booking-panel">
+            <span class="booking-panel-label">Why add it?</span>
+            <h3 class="booking-panel-title">A clearer booking path</h3>
+            <p class="booking-panel-text">
+              Guests can move from browsing your landing page straight into a
+              recognizable hotel checkout flow without hunting for the listing.
+            </p>
+            <a href="#" class="booking-inline-link" data-booking-link
+              >Open the listing in a new tab</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -881,6 +927,9 @@
             <p class="footer-newsletter-text">
               Subscribe for exclusive offers and travel tips.
             </p>
+            <a href="#" class="footer-booking-link" data-booking-link
+              >Book on Booking.com</a
+            >
             <form class="newsletter-form" id="newsletterForm">
               <div class="newsletter-input-wrapper">
                 <input type="email" placeholder="Your email address" required />
