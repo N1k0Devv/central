@@ -1,5 +1,5 @@
 // ============================================
-// CENTRAL HOTEL KUTAISI - PREMIUM JAVASCRIPT
+// GREEN ROOMS KUTAISI - PREMIUM JAVASCRIPT
 // ============================================
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 800);
 
     // ---------- Content Refresh ----------
-    const mapUrl = 'https://maps.app.goo.gl/8KS8979kN33KCUDH6';
-    const bookingUrl = 'https://www.booking.com/hotel/ge/central-kutaisi2.en-gb.html';
-    const hotelsUrl = 'https://www.hotels.com/ho3363967936/central-hotel-kutaisi-kutaisi-georgia/';
+    const mapUrl = 'https://www.google.com/maps/search/?api=1&query=Green+Rooms+Kutaisi';
+    const bookingUrl = 'https://www.booking.com/searchresults.html?ss=Green+Rooms%2C+Kutaisi';
+    const hotelsUrl = 'https://www.hotels.com/Hotel-Search?destination=Green%20Rooms%20Kutaisi';
     const iconStar = '\u2605';
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const hasGsapMotion = !prefersReducedMotion && typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
@@ -38,21 +38,21 @@ document.addEventListener('DOMContentLoaded', function () {
         setExternalLink(navBookBtn, bookingUrl);
     }
 
-    document.title = 'Central Hotel Kutaisi | City Centre Stay in Kutaisi';
+    document.title = 'Green Rooms Kutaisi | Quiet 3-Star Stay';
 
     const heroParallaxElement = document.querySelector('.hero-parallax');
     if (heroParallaxElement) {
-        heroParallaxElement.style.backgroundImage = "url('images/64017f6d.avif')";
+        heroParallaxElement.style.backgroundImage = "url('images/311970096.jpg')";
     }
 
     const heroBadge = document.querySelector('.hero-badge');
     if (heroBadge) {
-        heroBadge.textContent = 'City Centre Stay';
+        heroBadge.textContent = '3-Star Quiet Stay';
     }
 
     const heroSubtitle = document.querySelector('.hero-subtitle');
     if (heroSubtitle) {
-        heroSubtitle.textContent = 'A central Kutaisi stay with free breakfast, free WiFi, free parking, and quick access to the city\'s main sights';
+        heroSubtitle.textContent = 'Quiet setting with a garden and terrace, WiFi rated 10.0, and a 10-20 minute walk to central Kutaisi landmarks';
     }
 
     const heroButtons = document.querySelectorAll('.hero-buttons .btn');
@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const aboutImage = document.querySelector('.about-image img');
     if (aboutImage) {
-        aboutImage.src = 'images/005951fd.avif';
-        aboutImage.alt = 'Central Hotel reception';
+        aboutImage.src = 'images/311970038.jpg';
+        aboutImage.alt = 'Green Rooms reception';
     }
 
     const expNumber = document.querySelector('.exp-number');
@@ -79,26 +79,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const expText = document.querySelector('.exp-text');
     if (expText) {
-        expText.innerHTML = 'Tbilisi<br>Street';
+        expText.innerHTML = 'Quiet<br>Setting';
     }
 
     const aboutTitle = document.querySelector('.about-content .section-title');
     if (aboutTitle) {
-        aboutTitle.innerHTML = 'A Practical City-Centre<br>Base in Kutaisi';
+        aboutTitle.innerHTML = 'A Quiet Garden & Terrace<br>Stay in Kutaisi';
     }
 
     const aboutText = document.querySelectorAll('.about-text');
     if (aboutText[0]) {
-        aboutText[0].textContent = 'Central Hotel is a city-centre property in Kutaisi with an on-site restaurant and a straightforward location for short stays, stopovers, and quick city visits.';
+        aboutText[0].textContent = 'Green Rooms is a 3-star stay in Kutaisi known for its quiet location, garden, and terrace, offering a calmer base within a 10-20 minute walk of the city center.';
     }
     if (aboutText[1]) {
-        aboutText[1].textContent = 'The saved listing places the hotel close to Kutaisi State Historical Museum and about a 14-minute walk from Bagrati Cathedral, while the Google Maps listing points to 12 Tbilisi Street in central Kutaisi.';
+        aboutText[1].textContent = 'Landmarks are easy to reach on foot: White Bridge is about 16 minutes away, Kutaisi State Historical Museum is around 1.8 km, and Bagrati Cathedral is about a 24-minute walk.';
     }
 
     const statNumbers = document.querySelectorAll('.about-stats .stat-number');
     const statLabels = document.querySelectorAll('.about-stats .stat-label');
-    const statTargets = ['7', '3', '24'];
-    const statText = ['Recent Reviews', 'Free Perks', 'Hour Front Desk'];
+    const statTargets = ['9.1', '10.0', '24'];
+    const statText = ['Superb Rating', 'WiFi Score', 'Hour Front Desk'];
     statNumbers.forEach(function (stat, index) {
         if (statTargets[index]) {
             stat.setAttribute('data-target', statTargets[index]);
@@ -113,50 +113,50 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const roomsSubtitle = document.querySelector('.rooms-section .section-subtitle');
     if (roomsSubtitle) {
-        roomsSubtitle.textContent = 'The current property listing focuses on comfort-forward rooms with fireplaces, soundproofing, premium bedding, and free WiFi.';
+        roomsSubtitle.textContent = 'Room highlights include balconies, air conditioning, private bathrooms with tubs, electric kettles, and strong connectivity throughout.';
     }
 
     const roomCardsContent = [
         {
-            image: 'images/259d634a.avif',
-            alt: 'Elite Room',
+            image: 'images/312533605.jpg',
+            alt: 'Green Rooms balcony room',
             action: 'Contact',
-            badge: '1 Bedroom',
-            title: 'Elite Room',
-            desc: 'A one-bedroom room type shown in the property listing, paired with a fireplace, free WiFi, and a separate dining area.',
+            badge: 'Balcony Room',
+            title: 'Balcony Comfort',
+            desc: 'A practical room setup with air conditioning, a balcony, and quiet surroundings for restful city breaks.',
             features: [
-                iconStar + ' Fireplace',
-                iconStar + ' Free WiFi',
-                iconStar + ' Dining Area',
-                iconStar + ' Private Bathroom'
+                iconStar + ' Balcony',
+                iconStar + ' Air Conditioning',
+                iconStar + ' Private Bathroom',
+                iconStar + ' Free WiFi'
             ]
         },
         {
-            image: 'images/1c977cc4.avif',
-            alt: 'Premium bedding and Select Comfort mattress',
+            image: 'images/312918178.jpg',
+            alt: 'Green Rooms private bathroom with tub',
             action: 'Contact',
-            badge: 'Sleep Focused',
-            title: 'Comfort Setup',
-            desc: 'Room details call out soundproofing, premium bedding, Select Comfort mattresses, and a minibar for a quieter overnight stay.',
+            badge: 'Private Bath',
+            title: 'Tub & Kettle Setup',
+            desc: 'Private bathrooms with tubs and in-room electric kettles add comfort for both short stays and longer visits.',
             features: [
-                iconStar + ' Soundproofed',
-                iconStar + ' Premium Bedding',
-                iconStar + ' Select Comfort Bed',
-                iconStar + ' Minibar'
+                iconStar + ' Bathtub',
+                iconStar + ' Electric Kettle',
+                iconStar + ' Fresh Towels',
+                iconStar + ' Daily Comfort'
             ]
         },
         {
-            image: 'images/2876c5ef.avif',
-            alt: 'In-room slippers',
+            image: 'images/312923005.jpg',
+            alt: 'Green Rooms garden and terrace area',
             action: 'Contact',
-            badge: 'Included',
-            title: 'Guest Essentials',
-            desc: 'The listing also highlights practical extras such as slippers, free bottled water, housekeeping on request, and everyday comfort touches.',
+            badge: 'Outdoor Focus',
+            title: 'Garden & Terrace',
+            desc: 'The garden and terrace are standout outdoor spaces for slow mornings, coffee breaks, and relaxed evenings.',
             features: [
-                iconStar + ' Slippers',
-                iconStar + ' Bottled Water',
-                iconStar + ' Housekeeping',
-                iconStar + ' Exterior Access'
+                iconStar + ' Quiet Location',
+                iconStar + ' Garden Access',
+                iconStar + ' Terrace Seating',
+                iconStar + ' Balcony Views'
             ]
         }
     ];
@@ -200,18 +200,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const amenitiesSubtitle = document.querySelector('.amenities-section .section-subtitle');
     if (amenitiesSubtitle) {
-        amenitiesSubtitle.textContent = 'These are the practical perks highlighted in the current property listing.';
+        amenitiesSubtitle.textContent = 'Green Rooms focuses on practical comfort, with top-rated WiFi and outdoor space leading the guest experience.';
     }
 
     const amenitiesContent = [
-        ['Free Breakfast', 'Free daily buffet breakfast is included each morning.'],
-        ['Free WiFi', 'Complimentary WiFi is listed as available throughout the property.'],
-        ['On-Site Restaurant', 'The hotel includes a restaurant for convenient meals on site.'],
+        ['WiFi Rated 10.0', 'Guests score the WiFi a perfect 10.0, ideal for remote work and smooth streaming.'],
+        ['Garden & Terrace', 'The garden and terrace are the primary outdoor highlights of the property.'],
+        ['Balcony Rooms', 'Selected rooms include balconies for fresh air and quieter views.'],
+        ['Free Private Parking', 'Private on-site parking is free, and no reservation is required.'],
         ['24-Hour Front Desk', 'Late arrivals and guest questions can be handled at any hour.'],
-        ['Free Parking', 'Free self parking is available on site.'],
-        ['Soundproofed Rooms', 'Room details emphasize quieter stays with soundproofing.'],
-        ['Fireplaces', 'Guest rooms include a fireplace feature in the current listing.'],
-        ['Housekeeping on Request', 'Room freshening is available when needed.']
+        ['Paid Airport Shuttle', 'Airport transfer is available on request for an additional fee.'],
+        ['Laundry Service', 'Laundry support is available for longer stays and travel resets.'],
+        ['Private Baths + Tubs', 'Rooms include private bathrooms with tubs and electric kettles.']
     ];
 
     const amenityCards = document.querySelectorAll('.amenity-card');
@@ -233,16 +233,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const gallerySubtitle = document.querySelector('.gallery-section .section-subtitle');
     if (gallerySubtitle) {
-        gallerySubtitle.textContent = 'Real property photos from the local image folder.';
+        gallerySubtitle.textContent = 'A quick look at Green Rooms, including quiet outdoor corners, reception spaces, and room details.';
     }
 
     const galleryContent = [
-        ['images/64017f6d.avif', 'Central Hotel exterior', 'Exterior'],
-        ['images/005951fd.avif', 'Reception area', 'Reception'],
-        ['images/a18c5dd2.avif', 'Hotel restaurant', 'Restaurant'],
-        ['images/259d634a.avif', 'Elite room', 'Elite Room'],
-        ['images/7ac8cb18.webp', 'Free daily buffet breakfast', 'Buffet Breakfast'],
-        ['images/fa61e82e.webp', 'Reception lounge', 'Reception Lounge']
+        ['images/311970096.jpg', 'Green Rooms exterior and garden frontage', 'Exterior & Garden'],
+        ['images/311970038.jpg', 'Green Rooms reception area', 'Reception'],
+        ['images/312923005.jpg', 'Green Rooms terrace seating', 'Terrace'],
+        ['images/312533605.jpg', 'Green Rooms balcony room', 'Balcony Room'],
+        ['images/311970105.jpg', 'Green Rooms quiet garden corner', 'Garden'],
+        ['images/311970122.jpg', 'Green Rooms shared lounge', 'Shared Lounge']
     ];
 
     const galleryItemsForContent = document.querySelectorAll('.gallery-item');
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const diningParallaxElement = document.querySelector('.dining-parallax');
     if (diningParallaxElement) {
-        diningParallaxElement.style.backgroundImage = "url('images/7ac8cb18.webp')";
+        diningParallaxElement.style.backgroundImage = "url('images/312923005.jpg')";
     }
 
     const diningTag = document.querySelector('.dining-text .section-tag');
@@ -275,19 +275,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const diningButton = document.querySelector('.dining-text .btn');
 
     if (diningTag) {
-        diningTag.textContent = 'Included Dining';
+        diningTag.textContent = 'Outdoor Highlights';
     }
     if (diningTitle) {
-        diningTitle.textContent = 'Breakfast & Restaurant';
+        diningTitle.textContent = 'Garden & Terrace Living';
     }
     if (diningDesc) {
-        diningDesc.textContent = 'The current listing highlights a free daily buffet breakfast and an on-site restaurant, making the hotel a practical option for early starts, short stays, and quick city breaks.';
+        diningDesc.textContent = 'Green Rooms is positioned for relaxed stays, with garden and terrace areas that support a quieter pace while still keeping the city center within walking distance.';
     }
 
     const diningContent = [
-        ['Buffet Breakfast', 'Included each morning as part of the stay'],
-        ['On-Site Restaurant', 'Easy meals without leaving the property'],
-        ['Walkable Centre', 'Set on Tbilisi Street near central Kutaisi landmarks']
+        ['Garden Space', 'A calm outdoor area for morning coffee and evening downtime'],
+        ['Terrace Seating', 'Open-air seating designed for lingering and fresh air'],
+        ['Walkable Location', 'A quiet setting within a 10-20 minute walk of the center']
     ];
 
     diningFeatures.forEach(function (feature, index) {
@@ -307,7 +307,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     if (diningButton) {
-        diningButton.textContent = 'Open in Google Maps';
+        diningButton.textContent = 'View Green Rooms on Map';
         diningButton.setAttribute('href', mapUrl);
         diningButton.setAttribute('target', '_blank');
         diningButton.setAttribute('rel', 'noreferrer');
@@ -316,17 +316,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const testimonialHeaderTag = document.querySelector('.testimonials-section .section-tag');
     const testimonialHeaderTitle = document.querySelector('.testimonials-section .section-title');
     if (testimonialHeaderTag) {
-        testimonialHeaderTag.textContent = 'Stay Snapshot';
+        testimonialHeaderTag.textContent = 'Guest Highlights';
     }
     if (testimonialHeaderTitle) {
-        testimonialHeaderTitle.textContent = 'Useful Guest Notes';
+        testimonialHeaderTitle.textContent = 'Green Rooms at a Glance';
     }
 
     const testimonialContent = [
-        ['Location', 'City-centre location with a short 6-minute walk to Kutaisi State Historical Museum and about 14 minutes on foot to Bagrati Cathedral.', 'WB', 'Walkable Base', 'Near key landmarks'],
-        ['Hours', 'Check-in starts at 2:00 PM, late check-in runs until midnight, and check-out is at noon.', 'AW', 'Arrival Window', 'Property policy'],
-        ['Rooms', 'Room details include fireplaces, soundproofing, premium bedding, Select Comfort mattresses, and free WiFi.', 'CN', 'Comfort Notes', 'Room amenities'],
-        ['Perks', 'Breakfast, WiFi, and parking are included, supported by an on-site restaurant and a 24-hour front desk.', 'IE', 'Included Extras', 'Hotel highlights']
+        ['Location', 'Quiet setting with a 16-minute walk to White Bridge, about 1.8 km to Kutaisi State Historical Museum, and around 24 minutes on foot to Bagrati Cathedral.', 'QS', 'Quiet Setting', 'Walkable landmarks'],
+        ['Rating', 'Overall score is 9.1 Superb, with standout sub-scores of WiFi 10.0 and cleanliness 9.4.', 'RT', 'Top Scores', 'Guest feedback'],
+        ['Rooms', 'Rooms include balconies, air conditioning, private bathrooms with tubs, and electric kettles for everyday comfort.', 'RM', 'Room Features', 'Comfort-focused setup'],
+        ['Services', 'Free private parking without reservation, 24-hour front desk, paid airport shuttle, and laundry service.', 'SV', 'Core Services', 'Practical support']
     ];
 
     const testimonialCards = document.querySelectorAll('.testimonial-card');
@@ -362,10 +362,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const contactTag = document.querySelector('.contact-section .section-tag');
     const contactTitle = document.querySelector('.contact-section .section-title');
     if (contactTag) {
-        contactTag.textContent = 'Find the Hotel';
+        contactTag.textContent = 'Find Green Rooms';
     }
     if (contactTitle) {
-        contactTitle.textContent = 'Location & Stay Details';
+        contactTitle.textContent = 'Location & Guest Details';
     }
 
     const contactCards = document.querySelectorAll('.contact-info-card');
@@ -376,17 +376,17 @@ document.addEventListener('DOMContentLoaded', function () {
             title.textContent = 'Address';
         }
         if (text) {
-            text.innerHTML = '12 Tbilisi St<br>Kutaisi, Georgia<br><a href="' + mapUrl + '" target="_blank" rel="noreferrer">Open in Google Maps</a>';
+            text.innerHTML = 'Kutaisi, Georgia<br>Quiet setting within a 10-20 minute walk of the center<br><a href="' + mapUrl + '" target="_blank" rel="noreferrer">Open in Google Maps</a>';
         }
     }
     if (contactCards[1]) {
         const title = contactCards[1].querySelector('h4');
         const text = contactCards[1].querySelector('p');
         if (title) {
-            title.textContent = 'Guest Score';
+            title.textContent = 'Guest Rating';
         }
         if (text) {
-            text.innerHTML = '9.8/10 on the saved Hotels.com listing<br>Based on 7 guest reviews';
+            text.innerHTML = '9.1 Superb overall<br>WiFi: 10.0 | Cleanliness: 9.4';
         }
     }
     if (contactCards[2]) {
@@ -396,17 +396,17 @@ document.addEventListener('DOMContentLoaded', function () {
             title.textContent = 'Nearby';
         }
         if (text) {
-            text.innerHTML = '6 min walk to Kutaisi State Historical Museum<br>14 min walk to Bagrati Cathedral';
+            text.innerHTML = '16 min walk to White Bridge<br>1.8 km to Kutaisi State Historical Museum<br>24 min walk to Bagrati Cathedral';
         }
     }
     if (contactCards[3]) {
         const title = contactCards[3].querySelector('h4');
         const text = contactCards[3].querySelector('p');
         if (title) {
-            title.textContent = 'Check-In & Check-Out';
+            title.textContent = 'Property Services';
         }
         if (text) {
-            text.innerHTML = 'Check-in: 2:00 PM to midnight<br>Check-out: noon';
+            text.innerHTML = 'Free private parking (no reservation)<br>24-hour desk, paid airport shuttle, laundry';
         }
     }
 
@@ -414,14 +414,14 @@ document.addEventListener('DOMContentLoaded', function () {
     if (contactMapWrapper) {
         contactMapWrapper.innerHTML = [
             '<div class="contact-map-card">',
-            '    <h3 class="form-title">Find Central Hotel</h3>',
-            '    <p class="contact-map-lead">Use the live map to preview the exact spot on Tbilisi Street, then jump to the Booking.com listing for live pricing and current availability.</p>',
+            '    <h3 class="form-title">Find Green Rooms</h3>',
+            '    <p class="contact-map-lead">Preview the property location in Kutaisi and open Booking.com for current rates and availability.</p>',
             '    <div class="contact-map-frame">',
             '        <iframe',
-            '            src="https://www.google.com/maps?q=Central%20Hotel%2C%2012%20Tbilisi%20St%2C%20Kutaisi%2C%20Georgia&output=embed"',
+            '            src="https://www.google.com/maps?q=Green%20Rooms%2C%20Kutaisi%2C%20Georgia&output=embed"',
             '            loading="lazy"',
             '            referrerpolicy="no-referrer-when-downgrade"',
-            '            title="Map of Central Hotel Kutaisi">',
+            '            title="Map of Green Rooms Kutaisi">',
             '        </iframe>',
             '    </div>',
             '    <div class="contact-map-actions">',
@@ -438,7 +438,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const footerDesc = document.querySelector('.footer-desc');
     if (footerDesc) {
-        footerDesc.textContent = 'Central Hotel Kutaisi is a city-centre stay on Tbilisi Street with free breakfast, free WiFi, free parking, and an on-site restaurant.';
+        footerDesc.textContent = 'Green Rooms Kutaisi is a quiet 3-star stay with a garden, terrace, free private parking, and top-rated WiFi (10.0).';
     }
 
     const socialLinks = document.querySelectorAll('.footer-social .social-link');
@@ -459,7 +459,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (quickLinksList) {
         const quickLinks = quickLinksList.querySelectorAll('a');
         if (quickLinks[3]) {
-            quickLinks[3].textContent = 'Breakfast & Dining';
+            quickLinks[3].textContent = 'Garden & Terrace';
         }
     }
 
@@ -470,10 +470,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const awardBadges = document.querySelectorAll('.award-badge');
     if (awardBadges[0]) {
-        awardBadges[0].textContent = 'Booking.com Ready';
+        awardBadges[0].textContent = '9.1 Superb';
     }
     if (awardBadges[1]) {
-        awardBadges[1].textContent = 'Breakfast Included';
+        awardBadges[1].textContent = 'WiFi 10.0';
     }
 
     // ---------- Navbar Scroll Effect ----------
